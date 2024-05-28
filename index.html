@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <title>Hermanmiller</title>
+    <style>
+        @font-face {
+            font-family: ;
+            src: url();
+        }
+        :root{
+            --main-color: #1b1b1b;
+            --sub-color:#e9e9eb;
+            --txt-color:#fff;
+            --swiper-navigation-size: 30px;
+
+            font-size: 15px;
+            background-color: var(--main-color);
+            color: var(--txt-color);
+        }
+        wrap{
+            overflow: hidden;
+        }
+        .header{
+            height: 100px;
+            padding: 10px;
+        }
+        .header .container{
+            display: flex;
+            flex-flow: row wrap;
+        }
+        
+        .sec{
+            height: 100vh;
+        }
+        .sec02{
+            color: var(--txt-color);
+            text-align: center;
+        }
+        .swiper-button-next, .swiper-button-prev{
+            color: var(--sub-color);
+        }
+        .swiper .slide .flex{
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        .sec03{
+            background-color: var(--sub-color);
+        }
+        .footer{
+            height: 100px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <header class="header">
+            <div class="container">
+                <h1>logo</h1>
+                <nav class="main-nav">
+                    <ul>
+                        <li>SHOP</li>
+                        <li>Hermanmiller</li>
+                    </ul>
+                </nav>
+                <ul class="q-nav">
+                    <li>login</li>
+                    <li>cart</li>
+                    <li>search</li>
+                    <li>global</li>
+                </ul>
+            </div>
+        </header>
+        <main class="main">
+            <section class="sec sec01">
+                <div class="container">
+                    <video preload="auto" autoplay="autoplay" muted="muted"  src="./images/허먼밀러 영상.mp4"></video>
+                </div>
+            </section>
+            <section class="sec sec02">
+                <div class="container swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="txt-box">
+                                <h2>잠재력 파워링</h2>
+                                <p>진정한 퍼포먼스, 전략적 서포트, 향상되는 자신감: <br>
+                                    이것이 바로 게임을 위해 개선된 디자인이 만들어 내는 차이입니다. <br>
+                                    엠바디/Embody에서부터 에어론/Aeron, 세일/Sayl에 이르기까지, <br>
+                                    허먼밀러 게이밍 체어는 더 많은 승리의 순간을 만들어 낼 플레이어의 잠재력에 힘을 불어넣어 줍니다.
+                                </p> 
+                            </div>
+                            <a href="#"><input type="button" value="지금 구매하기"></a>  
+                        </div>
+                        <div class="swiper-slide flex">
+                            <div class="img-box"><img src="./images/img-main01.jpg" alt="Embody"></div>
+                            <div class="txt-box">
+                                <h2>HERMAN MILLER X LOGITECH G 엠바디/EMBODY 게이밍 체어</h2>
+                                <p>더 나은, 최적의 환경에서 게임을 즐기세요. <br> 
+                                    허먼 밀러/Herman Miller와 로지텍G의 엠바디/Embody 게이밍 체어는 <br>
+                                    과학적으로 증명된 인체공학적 디자인으로 편안함과 쾌적함을 제공합니다.
+                                </p> 
+                            </div>
+                            <a href="#"><input type="button" value="지금 구매하기"></a>  
+                        </div>
+                        <div class="swiper-slide flex">
+                            <div class="img-box"><img src="./images/img-main02.jpg" alt="sayl"></div>
+                            <div class="txt-box">
+                                <h2>세일/SAYL 체어</h2>
+                                <p>
+                                    스타일로 플레이<br>
+                                    '덜어내는 것이 더 아름답다’는 미학과 건축에 영감을 받은<br> 
+                                    세일/Sayl 체어는서스펜션 브릿지 기술을 바탕으로, <br>
+                                    보다 적은 부품과 재료로게이밍을 위해 스타일리시하게 디자인됐습니다.
+                                </p> 
+                            </div>
+                            <a href="#"><input type="button" value="지금 구매하기"></a>  
+                        </div>
+                      </div>
+                      <!-- If we need navigation buttons -->
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                    
+                    </div>
+                </div>
+            </section>
+            <section class="sec sec03">
+
+            </section>
+            <section class="sec sec04">
+
+            </section>
+            <section class="sec sec05">
+
+            </section>
+        </main>
+           
+        <footer class="footer">
+            <div class="container">
+
+            </div>
+        </footer>
+    </section>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+</html>
