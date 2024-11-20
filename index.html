@@ -9,10 +9,10 @@
     
     <title>Hermanmiller</title>
     <style>
-        @font-face {
+        /* @font-face {
             font-family: ;
             src: url();
-        }
+        } */
         :root{
             --main-color: #1b1b1b;
             --sub-color:#e9e9eb;
@@ -20,10 +20,12 @@
             --swiper-navigation-size: 30px;
 
             font-size: 15px;
-            background-color: var(--main-color);
             color: var(--txt-color);
         }
-        wrap{
+        *{
+            background-color: var(--main-color);
+        }
+        .wrap{
             overflow: hidden;
         }
         .header{
@@ -32,26 +34,91 @@
         }
         .header .container{
             display: flex;
-            flex-flow: row wrap;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+        
+        .logo{
+            display: flex;
+            width: 200px;
+            height: 30px;
+        }
+        .main-nav ul{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content:space-evenly;
+            column-gap: 3em;
+            cursor: pointer;
+        }
+        .main-nav li:hover{
+            color: #c9c9c9;
+        }
+       
+        .h-nav{
+            display: none;
+        }
+        .q-nav{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content:space-evenly;
+            column-gap: 3em;
+            cursor: pointer;
+        }
+        .q-nav li:hover{
+            color: #c9c9c9;
         }
         
         .sec{
             height: 100vh;
         }
+        .sec01{
+            width: 1720px;
+        }
         .sec02{
             color: var(--txt-color);
             text-align: center;
+            
         }
+        a > input{
+            cursor: pointer;
+            width: 100px;
+            height: 30px;
+            background-color: #fff;
+        }
+
         .swiper-button-next, .swiper-button-prev{
             color: var(--sub-color);
         }
-        .swiper .slide .flex{
+        
+        .flex{
             display: flex;
-            flex-flow: row nowrap;
+        }
+        .img-box{
+            padding-top: 150px;
+            width: 860px;
+            height: 600px;
+        }
+        .txt-box{
+            padding-top: 300px;
+            width: 800px;
+            height: 600px;
+        }
+        .txt-box0{
+            padding-left: 350px;
         }
         .sec03{
+            width: 1280px;
+            height: 1080px;
             background-color: var(--sub-color);
+            color: var(--main-color);
         }
+        .img-boxfl{
+            float: left;
+        }
+        .img-boxfr{
+            float: right;
+        }
+        
         .footer{
             height: 100px;
             padding: 10px;
@@ -62,11 +129,15 @@
     <section class="wrap">
         <header class="header">
             <div class="container">
-                <h1>logo</h1>
+                <div class="logo">
+                    <img src="./images/img-logo-s.svg" alt="Hermanmiller">
+                </div>
                 <nav class="main-nav">
                     <ul>
-                        <li>SHOP</li>
-                        <li>Hermanmiller</li>
+                        <li>SHOP
+                            <li class="h-nav">게이밍 체어</li>
+                            <li class="h-nav">모니터암</li>
+                        </li>
                     </ul>
                 </nav>
                 <ul class="q-nav">
@@ -88,39 +159,44 @@
                     <div class="swiper-wrapper">
                         <!-- Slides -->
                         <div class="swiper-slide">
-                            <div class="txt-box">
+                            <div class="txt-box txt-box0">
                                 <h2>잠재력 파워링</h2>
                                 <p>진정한 퍼포먼스, 전략적 서포트, 향상되는 자신감: <br>
                                     이것이 바로 게임을 위해 개선된 디자인이 만들어 내는 차이입니다. <br>
                                     엠바디/Embody에서부터 에어론/Aeron, 세일/Sayl에 이르기까지, <br>
                                     허먼밀러 게이밍 체어는 더 많은 승리의 순간을 만들어 낼 플레이어의 잠재력에 힘을 불어넣어 줍니다.
                                 </p> 
+                                <a href="#"><input type="button" value="지금 구매하기"></a>  
                             </div>
-                            <a href="#"><input type="button" value="지금 구매하기"></a>  
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex">
+                               <div class="img-box"><img src="./images/img-main01.jpg" alt="Embody"></div>
+                                <div class="txt-box">
+                                    <h2>HERMAN MILLER X LOGITECH G 엠바디/EMBODY 게이밍 체어</h2>
+                                    <p>더 나은, 최적의 환경에서 게임을 즐기세요. <br> 
+                                        허먼 밀러/Herman Miller와 로지텍G의 엠바디/Embody 게이밍 체어는 <br>
+                                        과학적으로 증명된 인체공학적 디자인으로 편안함과 쾌적함을 제공합니다.
+                                    </p> 
+                                    <a href="#"><input type="button" value="지금 구매하기"></a>  
+                                </div> 
+                            </div>
                         </div>
                         <div class="swiper-slide flex">
-                            <div class="img-box"><img src="./images/img-main01.jpg" alt="Embody"></div>
-                            <div class="txt-box">
-                                <h2>HERMAN MILLER X LOGITECH G 엠바디/EMBODY 게이밍 체어</h2>
-                                <p>더 나은, 최적의 환경에서 게임을 즐기세요. <br> 
-                                    허먼 밀러/Herman Miller와 로지텍G의 엠바디/Embody 게이밍 체어는 <br>
-                                    과학적으로 증명된 인체공학적 디자인으로 편안함과 쾌적함을 제공합니다.
-                                </p> 
+                            <div class="flex">
+                                <div class="txt-box">
+                                    <h2>세일/SAYL 체어</h2>
+                                    <p>
+                                        스타일로 플레이<br>
+                                        '덜어내는 것이 더 아름답다’는 미학과 건축에 영감을 받은<br> 
+                                        세일/Sayl 체어는서스펜션 브릿지 기술을 바탕으로, <br>
+                                        보다 적은 부품과 재료로게이밍을 위해 스타일리시하게 디자인됐습니다.
+                                    </p> 
+                                    <a href="#"><input type="button" value="지금 구매하기"></a>  
+                                </div>                                
+                                <div class="img-box"><img src="./images/img-main02.jpg" alt="sayl"></div>
+
                             </div>
-                            <a href="#"><input type="button" value="지금 구매하기"></a>  
-                        </div>
-                        <div class="swiper-slide flex">
-                            <div class="img-box"><img src="./images/img-main02.jpg" alt="sayl"></div>
-                            <div class="txt-box">
-                                <h2>세일/SAYL 체어</h2>
-                                <p>
-                                    스타일로 플레이<br>
-                                    '덜어내는 것이 더 아름답다’는 미학과 건축에 영감을 받은<br> 
-                                    세일/Sayl 체어는서스펜션 브릿지 기술을 바탕으로, <br>
-                                    보다 적은 부품과 재료로게이밍을 위해 스타일리시하게 디자인됐습니다.
-                                </p> 
-                            </div>
-                            <a href="#"><input type="button" value="지금 구매하기"></a>  
                         </div>
                       </div>
                       <!-- If we need navigation buttons -->
@@ -131,7 +207,16 @@
                 </div>
             </section>
             <section class="sec sec03">
-
+                <div class="txt">
+                    <h2>게이밍을 위한 탁월한 인체공학 디자인</h2>
+                    <p>허먼 밀러/Herman Miller는게임 플레이 방식을 과학적으로 혁신하고자 로지텍G와 함께 노력하고 있습니다.</p>                              
+                </div>
+                <div class="img-boxfl">
+                    <img src="./images/img-bottom01.jpg" alt="bot01">
+                </div>
+                <div class="img-boxfr">
+                    <img src="./images/img-bottom02.jpg" alt="bot02">
+                </div>
             </section>
             <section class="sec sec04">
 
@@ -155,6 +240,12 @@
                 prevEl: '.swiper-button-prev',
             },
         });
+        // ('.main-nav li').mouseover({
+        //     ('.h-nav').show()
+        // })
+        // ('.main-nav li').mouseout({
+
+        // })
     </script>
 </body>
 </html>
